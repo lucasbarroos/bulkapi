@@ -1,0 +1,45 @@
+{
+  "name": "bulk-api",
+  "version": "1.0.0",
+  "description": "API REST BulkApi",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "nodemon index.js",
+    "production": "pm2 start index.js --name bulk-api",
+    "build-prod-linux": "pkg -t latest-linux-x64 -o ./bulk-api ./index.js",
+    "build-prod-windows": "pkg -t latest-win-x64 -o ./bulk-api.exe ./index.js"
+  },
+  "author": "Lucas Barros, Criatech Soluções LTDA",
+  "license": "MIT",
+  "dependencies": {
+    "archiver": "^2.1.0",
+    "async": "^2.6.1",
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "1.16.1",
+    "cloudrail-si": "^2.21.12",
+    "create-html": "^4.1.0",
+    "dotenv": "^5.0.1",
+    "express": "4.14.1",
+    "https": "^1.0.0",
+    "jsonwebtoken": "7.3.0",
+    "lodash": "4.17.4",
+    "mongoose": "^5.2.8",
+    "mongoose-paginate": "5.0.3",
+    "mongoose-pagination": "1.0.0",
+    "multer": "^1.3.0",
+    "node-restful": "0.2.6",
+    "pagination": "^0.4.4",
+    "path": "^0.12.7",
+    "pm2": "2.6.1",
+    "request": "^2.88.0",
+    "uri-js": "^4.2.2",
+    "urlencode": "^1.1.0",
+    "utf8": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "1.11.0",
+    "pm2": "2.4.2"
+  }
+}
